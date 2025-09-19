@@ -1,0 +1,315 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NPCcontinueMover : MonoBehaviour
+{
+    public string npcID; 
+    [Header("移动设置")]
+    [SerializeField] public Transform[] movePoints;
+    [SerializeField] public float[] moveDistances;
+    [SerializeField] public float[] moveSpeeds;
+
+    [Header("可选参数")]
+    [SerializeField] public bool hideAtStart = true;
+    [SerializeField] public bool disappearAtEnd = true;
+    [SerializeField] public float moveDelay = 0f;
+
+    [Header("碰撞绕边设置")]
+    [Tooltip("会阻挡 NPC 的层。若留空，将自动从物理碰撞矩阵推断。")]
+    [SerializeField] private LayerMask collisionMask;
+    [Tooltip("皮肤宽度，避免贴边误判。")]
+    [SerializeField] private float skin = 0.01f;
+    [Tooltip("卡住时做一个很小的垂直于行进方向的挤边比例（相对本帧步长）。0~0.5")]
+    [Range(0f, 0.5f)]
+    [SerializeField] private float edgeNudgeRatio = 0.2f;
+
+    public bool hasFinishedMoving = false;
+    public string lastscenename = "";
+    public static bool hasgoout = false;
+
+    public int currentStage = 0;
+    public bool isMoving = false;
+    public static bool doisMoving = false;
+    private bool isTriggered = false;
+    private float delayTimer = 0f;
+    private bool isPlayerInRange = false;
+    public UniversalExpressionEvaluator evaluator;
+    private Rigidbody2D rb;
+    public bool hassetdisvisable = false;
+    private GameObject Son;
+
+    // Cast 过滤器与缓存
+    private ContactFilter2D moveFilter;
+    private RaycastHit2D[] hitBuffer = new RaycastHit2D[8];
+    readonly Dictionary<string, object> vars = new();
+
+    public int GetCurrentStage() => currentStage;
+    public bool GetIsMoving() => isMoving;
+    public bool GetIsTriggered() => isTriggered;
+    public bool GetHasSetDisvisable() => hassetdisvisable;
+    public bool GetHasFinishedMoving() => hasFinishedMoving;
+
+    void Awake()
+    {
+        Son = GameObject.FindGameObjectWithTag("Player");
+        rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+        {
+            Debug.LogError("需要在NPC上挂载 Rigidbody2D，碰撞才能正常工作。");
+        }
+        else
+        {
+            // 运动学刚体移动更稳定；若需要被推开、受力，可设为 Dynamic
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+            // 如需：rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+            // 若用户未在 Inspector 指定 collisionMask，则按物理矩阵自动推断
+            if (collisionMask.value == 0)
+            {
+                collisionMask = Physics2D.GetLayerCollisionMask(gameObject.layer);
+                // 一般不把自己这层当障碍
+                collisionMask &= ~(1 << gameObject.layer);
+            }
+
+            moveFilter = new ContactFilter2D
+            {
+                useLayerMask = true,
+                layerMask = collisionMask,
+                useTriggers = false // 触发器不当做阻挡。如需避让触发器，将其设为 true
+            };
+        }
+    }
+
+    void Start()
+    {
+        var currentData = GameManager.Instance?.currentSaveData;
+        if (movePoints.Length != moveSpeeds.Length)
+        {
+            Debug.LogWarning("movePoints 和 moveSpeeds 长度不一致，将使用最短长度。");
+        }
+
+        if (moveDistances.Length != movePoints.Length)
+        {
+            Debug.LogWarning("moveDistances 长度与 movePoints 不一致，将补齐为相同长度。");
+            System.Array.Resize(ref moveDistances, movePoints.Length);
+            for (int i = 0; i < moveDistances.Length; i++)
+            {
+                if (moveDistances[i] == 0f)
+                    moveDistances[i] = 0.05f;
+            }
+        }
+
+        SetVisible(!hideAtStart);
+    }
+
+    void Update()
+    {
+        vars["open"] = GlobalTimer.ElapsedTime >= TimerThresholdActivator.triggerTime && isPlayerInRange && Input.GetKeyDown(KeyCode.E);
+        vars["livingisplaying"] = GlobalTimer.ElapsedTime >= TimerThresholdActivator.triggerTime && TVplaying.isplaying;
+        vars["gooutisplaying"] = GlobalTimer.ElapsedTime >= TimerThresholdActivator.triggerTime && TVplaying.isplaying && hasgoout == false;
+        vars["soncoming"] = GlobalTimer.ElapsedTime >= TimerThresholdActivator.triggerTime && TVplaying.isplaying && movePoints[0].transform.position.y <= 3.31f && movePoints[0].transform.position.x <= -20.83f && hasgoout == true;
+        vars["isplaying"] = GlobalTimer.ElapsedTime >= TimerThresholdActivator.triggerTime && TVplaying.isplaying && hasgoout == false && Son.transform.position.y <= -246.0019f;
+        vars["sonisplaying"] = GlobalTimer.ElapsedTime >= TimerThresholdActivator.triggerTime && TVplaying.isplaying && hasgoout == false && Son.transform.position.y > -246.0019f; 
+        vars["timedone"] = GlobalTimer.ElapsedTime >= TimerThresholdActivator.triggerTime && TVplaying.isplaying && hasgoout == true && Timer.instance.currentTime <= 1.5f;
+        vars["hidenroom"] = GlobalTimer.ElapsedTime >= TimerThresholdActivator.triggerTime && TVplaying.isplaying;
+        vars["momtoselfroom"] = PlayerMovementMonitor.awake && doorTeleport.previousSceneName == lastscenename && gameover2.momisrunning == true;
+        if (!isTriggered && PlayerMovementMonitor.awake && doorTeleport.previousSceneName == lastscenename && !TVplaying.isplaying && evaluator == null)
+        {
+            isTriggered = true;
+            delayTimer = moveDelay;
+        }else if(!isTriggered && evaluator != null && evaluator.EvaluateBool(vars)){
+            isTriggered = true;
+            delayTimer = moveDelay;
+        }
+
+        if (isTriggered && !isMoving && !hasFinishedMoving)
+        {
+            delayTimer -= Time.deltaTime;
+            if (delayTimer <= 0f)
+            {
+                isMoving = true;
+                doisMoving = true;
+                SetVisible(true);
+            }
+        }
+
+        if (disappearAtEnd && hasFinishedMoving && !hassetdisvisable){
+                    SetVisible(false);
+                    hasgoout = true;
+                    hassetdisvisable = true;
+                    }
+        
+        if(isMoving){
+            SetVisible(true);
+        }
+    }
+
+    public void triggerMove(){
+        isTriggered = true;
+        delayTimer = moveDelay;
+    }
+
+    void FixedUpdate()
+    {
+        if (!isMoving || currentStage >= movePoints.Length) return;
+
+        Vector2 target = (Vector2)movePoints[currentStage].position;
+        float speed = moveSpeeds[currentStage];
+
+        // 当前与目标的向量
+        Vector2 currentPos = rb ? rb.position : (Vector2)transform.position;
+        Vector2 toTarget = target - currentPos;
+
+        // 本帧最大可移动距离
+        float step = speed * Time.fixedDeltaTime;
+        if (step <= 0f)
+            return;
+
+        // 期望位移（不超过 step）
+        Vector2 desiredDelta = toTarget;
+        float dist = desiredDelta.magnitude;
+        if (dist > step)
+            desiredDelta = desiredDelta * (step / dist);
+
+        // 计算“自动绕边”后实际可走的位移
+        Vector2 allowedDelta = ComputeAvoidedDelta(desiredDelta);
+
+        Vector2 nextPos = currentPos + allowedDelta;
+
+        // 推进刚体位置
+        if (rb)
+            rb.MovePosition(nextPos);
+        else
+            transform.position = nextPos; // 兜底，不推荐无刚体
+
+        // 抵达判定：用计划的 nextPos 与目标距离
+        if (Vector2.Distance(nextPos, target) <= moveDistances[currentStage])
+        {
+            currentStage++;
+            if (currentStage >= movePoints.Length)
+            {
+                
+                hasFinishedMoving = true;
+                isMoving = false;
+                doisMoving = false;
+                if (disappearAtEnd){
+                    SetVisible(false);
+                    }
+            }
+        }
+    }
+
+    // 计算在碰撞约束下，本帧允许的位移（包含自动贴边滑动与微调）
+    // 计算在碰撞约束下，本帧允许的位移（包含自动贴边滑动与微调 + 智能角度扫描）
+private Vector2 ComputeAvoidedDelta(Vector2 delta)
+{
+    if (delta == Vector2.zero || rb == null)
+        return Vector2.zero == delta ? delta : Vector2.zero;
+
+    // 1) 直接可走
+    if (CanMove(delta))
+        return delta;
+
+    // 2) 尝试主轴/副轴（原本逻辑）
+    bool xIsPrimary = Mathf.Abs(delta.x) >= Mathf.Abs(delta.y);
+    Vector2 primary = xIsPrimary ? new Vector2(delta.x, 0f) : new Vector2(0f, delta.y);
+    Vector2 secondary = xIsPrimary ? new Vector2(0f, delta.y) : new Vector2(delta.x, 0f);
+
+    if (primary != Vector2.zero && CanMove(primary))
+        return primary;
+
+    if (secondary != Vector2.zero && CanMove(secondary))
+        return secondary;
+
+    // 3) 尝试角度扫描：逐步偏转目标方向，寻找可行路径
+    float angleStep = 15f;   // 每次旋转角度
+    int maxChecks = 12;      // 扫描 12 次（±180°）
+    Vector2 dir = delta.normalized;
+    float mag = delta.magnitude;
+
+    for (int i = 1; i <= maxChecks; i++)
+    {
+        float angle = angleStep * i;
+
+        // 左偏
+        Vector2 leftDir = Quaternion.Euler(0, 0, angle) * dir;
+        if (CanMove(leftDir * mag))
+            return leftDir * mag;
+
+        // 右偏
+        Vector2 rightDir = Quaternion.Euler(0, 0, -angle) * dir;
+        if (CanMove(rightDir * mag))
+            return rightDir * mag;
+    }
+
+    // 4) 原本的 edgeNudge 挤边逻辑
+    if (edgeNudgeRatio > 0f)
+    {
+        Vector2 perpDir = new Vector2(-delta.y, delta.x).normalized;
+        Vector2 nudge = perpDir * (delta.magnitude * edgeNudgeRatio);
+        if (nudge != Vector2.zero && CanMove(nudge))
+            return nudge;
+
+        nudge = -nudge;
+        if (nudge != Vector2.zero && CanMove(nudge))
+            return nudge;
+    }
+
+    // 5) 完全走不动
+    return Vector2.zero;
+}
+
+
+    // 基于 Rigidbody2D.Cast 的扫掠检测：这一步是否会撞到 collisionMask
+    private bool CanMove(Vector2 delta)
+    {
+        float distance = delta.magnitude;
+        if (distance < 0.0001f) return true;
+
+        Vector2 dir = delta.normalized;
+        int hitCount = rb.Cast(dir, moveFilter, hitBuffer, distance + skin);
+        return hitCount == 0;
+    }
+
+    void SetVisible(bool visible)
+    {
+        foreach (var renderer in GetComponentsInChildren<SpriteRenderer>(true))
+            renderer.enabled = visible;
+
+        foreach (var collider in GetComponentsInChildren<Collider2D>(true))
+            collider.enabled = visible;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+            isPlayerInRange = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+            isPlayerInRange = false;
+    }
+
+    public void SetState(int stage, bool moving, bool triggered, bool hasDisvisable, bool FinishedMoving)
+    {
+        currentStage = stage;
+        isMoving = moving;
+        isTriggered = triggered;
+        hassetdisvisable = hasDisvisable;
+        hasFinishedMoving = FinishedMoving;
+
+        // 恢复显示状态逻辑改成更智能
+        if (isMoving) {
+            SetVisible(true);
+        }
+        else if (hassetdisvisable) {
+            SetVisible(false);
+        }
+    //     else {
+    //     SetVisible(true);
+    // }
+    }
+}

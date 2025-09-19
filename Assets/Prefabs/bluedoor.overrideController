@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bluedoor
+  m_Controller: {fileID: 9100000, guid: 10476195184a5b7469bc2f0c21f250bc, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 263f15595bbfef242a86215cfd697f67, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2a7c6ffd6c5d1074f82284c85b66ca40, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b5790b541f899c7469e5c24a720d0aea, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1c4b1dd3656fd0f4eb01f795a6b42304, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 621288472b4d84742a57dba180d943c7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 814f9f968e1ba154f94a4a546fcfc823, type: 2}

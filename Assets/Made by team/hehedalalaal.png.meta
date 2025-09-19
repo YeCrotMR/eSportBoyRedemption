@@ -1,0 +1,1126 @@
+fileFormatVersion: 2
+guid: da6856cbf59be8e45b3c318074b4ae42
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hehedalalaal_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 709
+        width: 85
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680274e515036f54282d2c2d9560f948
+      internalID: -1559068924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 708
+        width: 99
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8c936814095d2418a8fe1fe36394ba
+      internalID: 567117640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_2
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 711
+        width: 28
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f159fbf7cc2ac4aa90997f4a11e5f0
+      internalID: -426704608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_3
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 711
+        width: 48
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc12273814b01c746bb76ae0614fb44d
+      internalID: 775951920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_4
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 710
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06aa1b9c68c3dec44ad69f897626c66c
+      internalID: 625565029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_5
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 710
+        width: 83
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e659ffbba5bb17e48bfffcc4be5fcab0
+      internalID: -2104607361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_6
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 717
+        width: 55
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a2e11cb9b268945af8fa7dd2be99f4
+      internalID: 1359416076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_7
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 594
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0477c8e0b4d99f547a0055e041703d7b
+      internalID: -1574220900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_8
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 596
+        width: 89
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddacc329bd6aa54a951b2206577db5c
+      internalID: 1684304345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 649
+        width: 96
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25018ac1037e15a43876ca47ec3d35e5
+      internalID: 978681043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_10
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 595
+        width: 96
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632a04900471dd34aa885d67cd04dcc5
+      internalID: -1638142976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_11
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 640
+        width: 97
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185e43300e01c564084757fd0f2497a6
+      internalID: -1094766843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_12
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 595
+        width: 96
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b42359ae9044af48af7031bb6723724
+      internalID: 423816786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_13
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 594
+        width: 96
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ee081eff5475b4180192332879cfb8
+      internalID: 2031315009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_14
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 586
+        width: 98
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5133882ecd1d5e646bbd53f134f02c17
+      internalID: -507563888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_15
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 485
+        width: 77
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c488c577ce2af0489e1e483320ca2b1
+      internalID: 901980027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_16
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 479
+        width: 110
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cc1b18a0af2bd4bbb25dfac58968cb
+      internalID: -1078427521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_17
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 479
+        width: 96
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28c04e8ffad12248be85b34363956b6
+      internalID: 313778730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_18
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 491
+        width: 97
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e7b3d7f585f4747a5cae8f94c49724
+      internalID: 1591068756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_19
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 487
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b72d13d3db7a4748951153c27d067e0
+      internalID: 1542995868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_20
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 479
+        width: 84
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6f8ccf9747b8045a2d060ea3e7f9f0
+      internalID: -1111935144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_21
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 376
+        width: 51
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb7278d8b0302546a4f89ea17146331
+      internalID: -1361417574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_22
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 363
+        width: 110
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c551e7475dd1cb479bc553e893b364d
+      internalID: 1174679569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_23
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 362
+        width: 58
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62860e325f83224a9e601a623a0bde6
+      internalID: -875596336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_24
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 370
+        width: 83
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdb92513f069564c812291c4291d994
+      internalID: 2057373518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_25
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 362
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4c8658a565a6b4da44eba8c3965794
+      internalID: 570170482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_26
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 371
+        width: 63
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ed6d8cbd19c944dbfae99321949d5a
+      internalID: -495097950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_27
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 241
+        width: 76
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ee8b29b5666fb488f3d0002f03b321
+      internalID: 1921605804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_28
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 248
+        width: 55
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9f7afada12ab0419f5412636113071
+      internalID: 205689460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_29
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 248
+        width: 69
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0aa7c679cb32848b1d54c1ec8efdb5
+      internalID: -2033889329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_30
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 248
+        width: 63
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a77f6e1871b6db419cbdace3d83f0a1
+      internalID: 919737498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_31
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 248
+        width: 65
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6e59c836e9ac54d98628ddd466ccac
+      internalID: -1218680399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_32
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 249
+        width: 95
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c196ab8272ea300408bee100c9294413
+      internalID: -675251041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_33
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 139
+        width: 102
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74598399dde4c5a458ec11966a639abd
+      internalID: -1943893207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_34
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 137
+        width: 97
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c512ee07ee1894d90e42fb55fa73c2
+      internalID: 2091207390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_35
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 130
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b28c9123cf703c459d35c0f1b7772d6
+      internalID: 957058407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_36
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 138
+        width: 77
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f06cb0ce34f2014190ae4648d4339e2
+      internalID: 861305251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_37
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 133
+        width: 75
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3355689f025227b49a996ffe43651f43
+      internalID: 1582593870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_38
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 132
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57de0bf312f97544ca5a08abee7ddbfa
+      internalID: 417785954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_39
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 24
+        width: 84
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f3084f7a61c5e4b9e6f62104ed038f
+      internalID: -987043505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_40
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 25
+        width: 6
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576f72b39f988c24b81878e0916894f1
+      internalID: -1740727138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_41
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 16
+        width: 62
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b4bc861ec28974f957337065102221
+      internalID: -277210350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_42
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 17
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195b02a6f60517846b3562683b8e49f6
+      internalID: -1114880705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_43
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 16
+        width: 109
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24b367e08d774e4c836eecc592499b0
+      internalID: -102274901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_44
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 23
+        width: 83
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7f83ebc62cf2e488075281fed15745
+      internalID: 1423543413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hehedalalaal_45
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 16
+        width: 34
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f8554c8feca7e43be40e466ac8f3d6
+      internalID: 2047369415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      hehedalalaal_0: -1559068924
+      hehedalalaal_1: 567117640
+      hehedalalaal_10: -1638142976
+      hehedalalaal_11: -1094766843
+      hehedalalaal_12: 423816786
+      hehedalalaal_13: 2031315009
+      hehedalalaal_14: -507563888
+      hehedalalaal_15: 901980027
+      hehedalalaal_16: -1078427521
+      hehedalalaal_17: 313778730
+      hehedalalaal_18: 1591068756
+      hehedalalaal_19: 1542995868
+      hehedalalaal_2: -426704608
+      hehedalalaal_20: -1111935144
+      hehedalalaal_21: -1361417574
+      hehedalalaal_22: 1174679569
+      hehedalalaal_23: -875596336
+      hehedalalaal_24: 2057373518
+      hehedalalaal_25: 570170482
+      hehedalalaal_26: -495097950
+      hehedalalaal_27: 1921605804
+      hehedalalaal_28: 205689460
+      hehedalalaal_29: -2033889329
+      hehedalalaal_3: 775951920
+      hehedalalaal_30: 919737498
+      hehedalalaal_31: -1218680399
+      hehedalalaal_32: -675251041
+      hehedalalaal_33: -1943893207
+      hehedalalaal_34: 2091207390
+      hehedalalaal_35: 957058407
+      hehedalalaal_36: 861305251
+      hehedalalaal_37: 1582593870
+      hehedalalaal_38: 417785954
+      hehedalalaal_39: -987043505
+      hehedalalaal_4: 625565029
+      hehedalalaal_40: -1740727138
+      hehedalalaal_41: -277210350
+      hehedalalaal_42: -1114880705
+      hehedalalaal_43: -102274901
+      hehedalalaal_44: 1423543413
+      hehedalalaal_45: 2047369415
+      hehedalalaal_5: -2104607361
+      hehedalalaal_6: 1359416076
+      hehedalalaal_7: -1574220900
+      hehedalalaal_8: 1684304345
+      hehedalalaal_9: 978681043
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
