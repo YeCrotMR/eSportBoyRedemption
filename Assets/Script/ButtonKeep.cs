@@ -14,7 +14,7 @@ public class ButtonKeep : MonoBehaviour
             Debug.LogWarning("按钮绑定失败");
             return;
         }
-
+        Debug.Log("内射所有人");
         btn.onClick.RemoveAllListeners();
         btn.onClick.AddListener(() => GameManager.Instance.LoadGame(parameterToSend));
     }
